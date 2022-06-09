@@ -1,5 +1,7 @@
 package spring.hellospring.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import spring.hellospring.domain.Member;
 import spring.hellospring.repository.MemberRepository;
 
@@ -11,6 +13,7 @@ public class MemberService {
 
     private final MemberRepository memberRepository;
 
+    @Autowired
     // 직접 생성하는게 아니라 외부에서 넣어주도록 설정
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
