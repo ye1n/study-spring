@@ -2,12 +2,14 @@ package spring.hellospring.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import spring.hellospring.domain.Member;
 import spring.hellospring.repository.MemberRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 // 새로운 테스트 생성 단축키 : ctrl + shift + t
 public class MemberService {
 
